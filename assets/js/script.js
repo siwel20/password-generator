@@ -30,6 +30,7 @@ function generatePassword() {
     passwordOptions = [];
     verifyArray = [];
 
+    // verifies selections
     while (passwordOptions.length === 0) {
       var pwdLower = confirm("Would you like for your password to contain lower case letters? Click 'OK' for yes and 'Cancel' for no");
       if (pwdLower) {
@@ -53,6 +54,15 @@ function generatePassword() {
       if (pwdNumbers) {
         passwordOptions.push(numbers);
         verifyArray.push(verifyNumbers);
+      }
+
+      if (passwordOptions.length === 0) {
+        alert("No character information was selected. Please make at least one selection for your new password.");
+      }
+      else if (confirm("Your new password is " + passwordLength + " characters long and will have " + verifyArray + ". Is that correct? Click 'OK' to get your new password, or click 'Cancel' to change your criteria ")){
+        preparePassword = false;
+      } else {
+        passwordLength = 0;
       }
     }
   }
