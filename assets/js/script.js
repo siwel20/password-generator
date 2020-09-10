@@ -5,6 +5,9 @@ var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var characters = "!#$%&()*+,-./:;<=>?@[]^_`{|}~";
 var numbers = "123456789";
 
+function generatePassword() {
+  
+}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
