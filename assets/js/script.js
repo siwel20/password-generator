@@ -10,10 +10,10 @@ function generatePassword() {
   var passwordLength = 0;
   var passwordOptions = [];
   var verifyArray = [];
-  var verifyLowerCase = "lower case letters ";
-  var verifyUpperCase = "upper case letters ";
-  var verifyCharacters = "special characters ";
-  var verifyNumbers = "numbers ";
+  var verifyLowerCase = "lower case letters";
+  var verifyUpperCase = " upper case letters";
+  var verifyCharacters = " special characters";
+  var verifyNumbers = " numbers";
   var newPassword = "";
 
 
