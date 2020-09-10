@@ -12,6 +12,9 @@ function generatePassword() {
   var verifyArray = [];
   var verifyLowerCase = "lower case letters ";
   var verifyUpperCase = "upper case letters ";
+  var verifyCharacters = "special characters ";
+  var verifyNumbers = "numbers ";
+
 
 
   //loop to require validate selections
@@ -38,6 +41,18 @@ function generatePassword() {
       if (pwdUpper) {
         passwordOptions.push(upperCase);
         verifyArray.push(verifyUpperCase);
+      }
+
+      var pwdChar = confirm("Would you like for your password to contain special characters/symbols? Click 'OK' for yes and 'Cancel' for no");
+      if (pwdChar) {
+        passwordOptions.push(characters);
+        verifyArray.push(verifyCharacters);
+      }
+
+      var pwdNumbers = confirm("Would you like for your password to contain numbers? Click 'OK' for yes and 'Cancel' for no");
+      if (pwdNumbers) {
+        passwordOptions.push(numbers);
+        verifyArray.push(verifyNumbers);
       }
     }
   }
