@@ -11,6 +11,7 @@ function generatePassword() {
   var passwordOptions = [];
   var verifyArray = [];
   var verifyLowerCase = "lower case letters ";
+  var verifyUpperCase = "upper case letters ";
 
 
   //loop to require validate selections
@@ -32,8 +33,13 @@ function generatePassword() {
         passwordOptions.push(lowerCase);
         verifyArray.push(verifyLowerCase);
       }
+
+      var pwdUpper = confirm("Would you like for your password to contain upper case letters? Click 'OK' for yes and 'Cancel' for no");
+      if (pwdUpper) {
+        passwordOptions.push(upperCase);
+        verifyArray.push(verifyUpperCase);
+      }
     }
-   
   }
   return;
 }
