@@ -1,4 +1,9 @@
 // Assignment code here
+// Variables that will be used to make up the new password
+var lowerCase = "abcdefghijklmnopqrstuvwxyz";
+var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var characters = "!#$%&()*+,-./:;<=>?@[]^_`{|}~";
+var numbers = "123456789";
 
 
 // Get references to the #generate element
