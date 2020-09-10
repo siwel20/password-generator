@@ -14,6 +14,7 @@ function generatePassword() {
   var verifyUpperCase = "upper case letters ";
   var verifyCharacters = "special characters ";
   var verifyNumbers = "numbers ";
+  var newPassword = "";
 
 
 
@@ -66,7 +67,12 @@ function generatePassword() {
       }
     }
   }
-  return;
+  // create new password and verify there is enough information to generate the new password
+  for(var i = 0; i < passwordLength && passwordOptions.length > 0 ; i++){
+    var randomPassword = passwordOptions[Math.floor(Math.random()* passwordOptions.length)];
+    newPassword += randomPassword[Math.floor(Math.random()* randomPassword.length)];
+  }
+  return newPassword;
 }
 
 // Get references to the #generate element
