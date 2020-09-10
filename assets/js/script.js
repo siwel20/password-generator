@@ -8,6 +8,9 @@ var numbers = "123456789";
 function generatePassword() {
   var preparePassword = true;
   var passwordLength = 0;
+  var passwordOptions = [];
+  var verifyArray = [];
+  var verifyLowerCase = "lower case letters ";
 
 
   //loop to require validate selections
@@ -18,6 +21,19 @@ function generatePassword() {
         alert("Your password selection is not long enough. Please enter a number between 8 and 128");
       }
     }
+
+    // clears array
+    passwordOptions = [];
+    verifyArray = [];
+
+    while (passwordOptions.length === 0) {
+      var pwdLower = confirm("Would you like for your password to contain lower case letters? Click 'OK' for yes and 'Cancel' for no");
+      if (pwdLower) {
+        passwordOptions.push(lowerCase);
+        verifyArray.push(verifyLowerCase);
+      }
+    }
+   
   }
   return;
 }
